@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['포메라니안'] = '털이 많아요';
-            dic_class2information['푸들'] = '독일에서 왔어요';
-            dic_class2information['시츄'] = '어리숙해요';
+            dic_class2information['사과'] = '사과';
+            dic_class2information['토마토'] = '토마토';
+            dic_class2information['딸기'] = '딸기';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
